@@ -1,0 +1,152 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+main{
+  width: 100%;
+  height: 400px;
+  background: url(../image/banquet.jpg) no-repeat center center;
+  background-size: cover;
+}
+.subvisual{
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  padding-top: 140px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+}
+.subvisual h2{
+  text-transform: capitalize;
+  font-size: 64px;
+  font-family: 'Jost', sans-serif;
+}
+.subvisual p{font-size: 20px;}
+
+
+.contents{
+  display: flex;
+}
+aside{
+  flex: 2;
+  text-align: center;
+  position: relative;
+}
+.submenu{
+  width: 250px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #d1d1d1;
+  padding: 70px 0;
+  line-height: 70px;
+  transition: 0.35s;
+  background-color: #BC3051;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+.submenu li a{position: relative;}
+.submenu li a:hover{color: #fff;}
+.submenu li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.submenu li a:hover:before{width: 100%;}
+.sub_active a{
+  color: #fff;
+  position: relative;
+}
+.sub_active a:before{
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: #fff !important;
+}
+.content{
+  flex: 4;
+  margin: auto;
+}
+.content_box{
+  width: 850px;
+  text-align: center;
+}
+.content_box img{padding-top: 50px;}
+.content_box h3{
+  width: 780px;
+  margin: auto;
+  padding: 50px 0;
+}
+.content_box h3 b{color: #BC3051;}
+.location{
+  margin: 15px 15px;
+  text-transform: capitalize;
+}
+.location ul{
+  display: flex;
+  color: #d1d1d1;
+}
+.location ul li:nth-child(3){
+  color: #BC3051;
+  font-weight: bold;
+}
+
+.material-symbols-outlined{
+  position: absolute;
+  top: 185px;
+  z-index: 1000;
+  display: block;
+  font-size: 50px !important;
+  color: rgba(255,255,255,0.6);
+  transition: 0.35s;
+}
+.prev{left: 115px;}
+.next{right: 110px;}
+.prev:hover, .next:hover{color: #fff;}
+
+.b_infomation{
+  display: flex;
+  text-align: start;
+  font-size: 15px;
+  border-top: 1px solid #ebebeb;
+  padding: 50px 0 100px 0;
+}
+.b_infomation table{width: 500px;}
+.b_infomation td:nth-child(1){
+  font-weight: bold;
+  width: 100px;
+  padding: 5px 0;
+}
+.b_tel{margin-left: 100px;}
+.b_tel h2{
+  font-size: 36px;
+  color: #BC3051;
+}
+.b_tel p{font-size: 15px;}
+.b_tel a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background-color: #545454;
+  margin-top: 15px;
+  border: none;
+  transition: 0.35s;
+}
+.b_tel a:hover{background-color: #000;}

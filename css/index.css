@@ -1,0 +1,336 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* 예약 */
+.reservation{
+  width: 100%;
+  height: 110px;
+  font-size: 16px;
+  background-color: #BC3051;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+.reserv_all{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.reserv_l, .reserv_c{display: flex;}
+.reserv_l{
+  text-align: start;
+  width: 340px;
+}
+.reserv_c{
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: #d1d1d1;
+  padding: 0 50px;
+}
+.checkin, .checkout{width: 170px}
+.checkin, .checkout, .room, .adult, .children{margin: 0 20px;}
+.r_head{
+  color: #d1d1d1;
+  font-weight: 500;
+}
+.r_caption{
+  margin-top: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+.search{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  color: #d1d1d1;
+  caret-color: #d1d1d1;
+}
+.search input::placeholder{
+  color: #d1d1d1;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.search button{
+  width: 130px;
+  height: 55px;
+  background-color: #393939;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.35s;
+}
+.search button:hover{background-color: #000;}
+
+/* 예약 팝업 */
+.reserv_choose{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  width: 1000px;
+  height:auto;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.34);
+}
+.choose{margin: 30px 15px 30px 15px;}
+.c_left p, .c_center p{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.c_left p:before{
+  content: '\f104';
+  font-family: 'fontawesome';
+  cursor: pointer;
+  float: left;
+  line-height: 25px;
+}
+.c_center p:after{
+  content: '\f105';
+  font-family: 'fontawesome';
+  cursor: pointer;
+  float: right;
+  line-height: 25px;
+}
+.c_left p:hover:before, .c_center p:hover:after{color: #BC3051;}
+table{
+  border-collapse: collapse;
+  font-size: 13px;
+  width: 250px;
+  height: 200px;
+}
+.c_left table tr:nth-child(4) td:nth-child(6){
+  background-color: #BC3051;
+  border-radius: 20px 0 0 20px;
+  color: #fff;
+}
+.c_left table tr:nth-child(4) td:nth-child(7){
+  background-color: #BC3051;
+  border-radius: 0 20px 20px 0;
+  color: #fff;
+}
+.c_right{width: 380px;}
+.c_right p:nth-of-type(1){
+  text-align: end;
+  font-size: 14px;
+  font-weight: bold;
+  color: #393939;
+  margin-bottom: 25px;
+}
+.c_right p:nth-of-type(1):before{
+  content: '\f05a';
+  font-family: 'fontawesome';
+  margin-right: 5px;
+}
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  font-weight: 400;
+  background-color: #393939;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -60px;
+  right: -40px;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.34);
+}
+.tooltip .tooltiptext:after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: #393939;
+  bottom: -5px;
+  right: 100px;
+  transform: rotate(45deg);
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.c_right p:nth-of-type(2){
+  cursor: pointer;
+  margin-top: 20px;
+}
+.c_right p:nth-of-type(2):after{
+  content: '\2b';
+  font-family: 'fontawesome';
+  margin-left: 5px;
+  transition: 0.35s;
+}
+.c_right p:nth-of-type(2):hover:after{
+  color: #BC3051;
+}
+.counter-container span:nth-child(2){
+  display: inline-block;
+  width: 70px;
+}
+.counter-value{display:inline-block; width: 20px;}
+.c_right button{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 70px;
+  width: 150px;
+  height: 50px;
+  background-color: #393939;
+  color: #fff;
+  border: none;
+  transition: 0.35s;
+}
+.c_right button:hover{background-color: #000;}
+.c_room,.c_adult, .c_children{
+  display: inline;
+  margin: 0 5px;
+}
+.c_room{font-weight: bold;}
+.c_adult span, .c_children span{
+  vertical-align: middle;
+}
+.material-symbols-outlined{
+  cursor: pointer;
+  background-color: #ddd;
+  color:#868686;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: 0.35s;
+}
+.active{
+  background-color: #BC3051;
+  color: #fff;
+}
+
+
+/* Main______________ */
+.autoplay{
+  /* border: 1px solid #000; */
+  width: 100%;
+  margin: auto;
+}
+.des{
+  height: 600px;
+  text-align: end;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+}
+.des h2{
+  width: 1200px;
+  margin: auto;
+  font-family: 'Jost', sans-serif;
+  font-size: 120px;
+  color: #fff;
+  padding-top: 190px;
+  padding-right: 150px;
+}
+.des p{
+  width: 1200px;
+  margin: auto;
+  font-size: 20px;
+  color: #fff;
+  padding-right: 150px;
+}
+.visual1{
+  background: url(../image/nvis01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.visual2{
+  background: url(../image/main_visual01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.visual3{
+  background: url(../image/main_visual02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.visual4{
+  background: url(../image/main_visual03.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+/* Section______________ */
+#contents{
+  width: 1200px;
+  margin: auto;
+  color: #393939;
+  padding-bottom: 90px;
+}
+#contents h2{
+  font-family: 'Jost', sans-serif;
+  font-size: 64px;
+  text-transform: uppercase;
+  margin: 50px 0 35px 0;
+}
+#contents p{
+  font-size: 32px;
+}
+#contents p em{
+  font-style: normal;
+  font-size: 20px;
+  color: #d1d1d1;
+}
+.con{display: flex;}
+.event{
+  justify-content: start;
+  align-items: center;
+}
+.attration{
+  justify-content: end;
+  align-items: center;
+}
+.img1, .img2{
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+.img1{background: url(../image/glamping.jpg) no-repeat center center;}
+.img1:after{
+  content: '';
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+  background-color: #BC3051;
+}
+.img2{background: url(../image/ddp.png) no-repeat center center;}
+.img2:after{
+  content: '';
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: -1;
+  background-color: #BC3051;
+}
+.events{text-align: start;position: relative;}
+.events p{margin-left: 70px;}
+
+.attractions{text-align: end;}
+.attractions p{margin-right: 70px;}
